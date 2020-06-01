@@ -38,13 +38,50 @@ body {
   left: 0;
 }
 
+.infinite-bar::before, .infinite-bar::after {
+  background: linear-gradient(to right,white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 300px;
+  position: absolute;
+  width: 250px;
+  z-index: 2;
+}
+
+.infinite-bar::before{
+  left: 0;
+  top: 0; 
+}
+
+.infinite-bar::after{
+  transform: rotateZ(180deg);
+  right: 0;
+  top: 0;
+}
+
 .sign {
   font-size: 50px;
   padding: 10px;
 }
-
 .logo {
+    width: 250px;
   height: 250px;
   margin-left: 15px;
   margin-right: 15px;
+}
+.logo-container {
+  width: 250px;
+  height: 250px;
+  margin-left: 15px;
+  margin-right: 15px;
+  position: absolute;
+  left: 0;
+}
+
+.logo-continerV2{
+  padding: 15px;
+}
+
+.logo-container img {
+  height: 100%;
+  width: 100%;
 }
