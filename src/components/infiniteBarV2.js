@@ -21,9 +21,10 @@ function tranformCSS() {
     if (left % 250 === 1 && track.children[i]) {
       track.children[i].style.transform = `translateX(${translateX}px)`;
       i++;
+      // end of images and new loop start.
       if (i === 15) {
         i = 0;
-        translateX += 3750;
+        translateX += 3750; // increment (250*15) 
       }
     }
     left += 1;
