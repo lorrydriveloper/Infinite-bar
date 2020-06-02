@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function tranformCSS(){
+function tranformCSS() {
   let left = 0;
   let initialLeft = 0;
   let i = 0;
@@ -26,7 +26,6 @@ function tranformCSS(){
         translateX += 3750;
       }
     }
-
     left += 1;
   }, 20);
 
@@ -40,7 +39,6 @@ const InfiniteBarV2 = () => {
   )
     .then((response) => response.json())
     .then((json) => {
-      logos = json.body.urls;
       setLogos(json.body.urls);
     });
 
