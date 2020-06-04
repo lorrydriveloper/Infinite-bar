@@ -12,8 +12,13 @@ const InfiniteBar = () => {
 
   useEffect(() => {
     let track = document.querySelector(".track");
+
     let left = 0;
     const moveleft = setInterval(() => {
+      // console.log(track.style.left);
+      if (parseInt(track.style.left, 10) > 3000){
+        left = 0
+      };
       left -= 1;
       track.style.left = left + "px";
     }, 20);
