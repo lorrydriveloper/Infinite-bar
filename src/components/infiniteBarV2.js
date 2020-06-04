@@ -4,7 +4,7 @@ function tranformCSS() {
   let left = 0;
   let initialLeft = 0;
   let i = 0;
-  let translateX = 3750;
+  let translateX = images.length * 250;
 
   const moveleft = setInterval(() => {
     let images = document.querySelectorAll(".logo-container");
@@ -13,7 +13,7 @@ function tranformCSS() {
     images.forEach((node, i) => {
       node.style.left = initialLeft - left + "px";
       initialLeft += 250;
-      if (i === 14) {
+      if (i === images.length - 1) {
         initialLeft = 0;
       }
     });
@@ -22,9 +22,9 @@ function tranformCSS() {
       track.children[i].style.transform = `translateX(${translateX}px)`;
       i++;
       // end of images and new loop start.
-      if (i === 15) {
+      if (i === images.length) {
         i = 0;
-        translateX += 3750; // increment (250*15) 
+        translateX += images.length * 250;
       }
     }
     left += 1;
