@@ -1,15 +1,11 @@
 import React from "react";
 import { render } from "react-dom";
-import InfiniteBar from "./components/InfiniteBar";
 import InfiniteBarV2 from "./components/infiniteBarV2";
 
 const App = () => {
   return (
     <div className="main-container">
       <h1>Image gallery</h1>
-      <div className="infinite-bar">
-        <InfiniteBar />
-      </div>
       <div className="infinite-bar">
         <InfiniteBarV2 />
       </div>
